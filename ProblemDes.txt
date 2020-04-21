@@ -1,0 +1,126 @@
+QUESTION 1: LINKED LIST
+
+$INPUT FORMAT:
+-->First line will be string of alphabets[not space separated]('ONE NEW LINE character' will be end of this input)
+-->Each of next lines will be queries of the format:('TWO NEW LINE characters' will be end of this input)
+   (EACH QUERIE SHOULD BE GIVEN IN A NEW LINE)
+           "S"  --Stores string in the linked list and prints HEAD AND TAIL of linked list
+           "P"  --prints the each alphabet with it's frequency
+           "A"  --prints the alphabets based on number of duplicates
+           "R n"--Removes alphabets that occur more than n ties consecutively and prints the final linked list
+
+$LIBRARIES USED:
+-->stringstream,getline
+
+$FUNCTIONS:
+For this question I created 2 linked lists one will be the MAIN linked list of alphabets and the other one is alphabet with frequency linked list.
+-->Stores ==stores string into the linked list and prints head and tail.(Every time store is called it adds the initial string that user gave to existing linked list )
+-->print == prints the each alphabet with it's frequency
+-->search == searches for a character in FREQ linked list
+-->insert == inserts a character in FREQ linked list
+-->sort == sorts the FREQ linked list
+-->ascend == prints the alphabets based on number of duplicates
+-->del == deletes a particular node
+-->remove == Removes alphabets that occur more than n ties consecutively and prints the final linked list
+
+################################################################################
+
+QUESTION 2 : BINARY SEARCH TREE
+
+$INPUT FORMAT:
+-->First line will be space separated integers[that you want to insert in BST]('ONE NEW LINE character' will be end of this input)
+-->Each of next lines will be queries of the format:('TWO NEW LINE characters' will be end of this input)
+   (EACH QUERIE SHOULD BE GIVEN IN A NEW LINE)
+           "M v"(space separated)   -- prints maximum and minimum value in the subtree of v
+           "P v"(space separated)   -- prints the predecessor of element v
+           "S v"(space separated)   -- prints the successor of element v
+           "C m n"(space separated) -- prints the least common ancestor of m,n
+
+$LIBRARIES USED:
+-->stringstream
+
+$FUNCTIONS:
+-->pred == predecessor of a given node
+-->succ == successor of a given node
+-->M    == finds minimum and maximum element in the subtree of given node
+-->LCA  == finds least common ancestor of given two nodes
+-->serach == finds the node which contains the given integer
+
+################################################################################
+
+QUESTION 3: GRAPH FUNCTIONALITIES
+
+$INPUT FORMAT:
+-->First line contains the single integer N(denoting number of vertices)('ONE NEW LINE character' will be end of this input)
+-->Next lines consists of edges in the format E v1 v2 W {space separated}{0<=v1,v2<N -->MUST BE FOLLOWED}('TWO NEW LINE characters' will be end of this input)
+   (EACH EDGE SHOULD BE GIVEN IN A NEW LINE)
+-->Each of next lines will be queries of the format:('two new line character' will be end of this input)
+   (EACH QUERIE SHOULD BE GIVEN IN A NEW LINE)
+         "a v"(space separated)     --find the neighbors of vertex v
+         "b"                        --prints all vertices in the graph
+         "c v1 v2"(space separated) --prints edge weight between v1 and v2
+         "d v"(space separated)     --prints whether the graph contains vertex v or not
+         "e v1 v2"(space separated) --prints whether the graph contains edge v1 v2 or not
+-->ALL THESE OPERATIONS ARE DONE ASUMMING THE GRAPH IS UNDIRECTED
+
+$LIBRARIES USED:
+-->stringstream
+
+$FUNCTION:
+-->neighbors == prints all neighbors of that vertex
+-->totalvertices == prints all vertices in graph
+-->edgeweight == prints the weight of the edge between those 2 vertices
+-->vertexcheck == prints whether graph contains that vertex or not.
+-->containedge == prints whether graph contains an edge between those 2 vertices or not.
+
+################################################################################
+
+QUESTION:4 ----BFS,DIJKSTRA'S
+
+$INPUT FORMAT:
+-->First line contains the single integer N(denoting number of vertices)('ONE NEW LINE character' will be end of this input)
+-->Next lines consists of edges in the format E v1 v2 W {space separated}{0<=v1,v2<N -->MUST BE FOLLOWED}('TWO NEW LINE characters' will be end of this input)
+   (EACH EDGE SHOULD BE GIVEN IN A NEW LINE)
+-->Each of next lines will be queries of the format:('two new line character' will be end of this input)
+   (EACH QUERIE SHOULD BE GIVEN IN A NEW LINE)
+           "Find"   -->Find the number of connected components in graph and prints the elements in the connected components
+           "SP u"   -->Here u will be the integer from where we want shortest path to other vertices
+
+$LIBRARIES USED:
+-->vector,list,stringstream , getline
+
+$FUNCTIONS:
+Used ADJACENCY LIST REPRESENTATION OF GRAPH(using linked list)
+Find : undirected_graph == constructs undirected graph from user edges INPUT
+       totalcount == Gives the count of total connected components in the graph
+       BFS == Runs BFS at a particular source
+       printconnected == prints the elements present in each connected components
+SP : directed_graph == constructs directed graph from user edges INPUT
+     dij == runs dijkstra's at a particularsource
+     decrese_key == decreases the distance in that node
+     extract_min == extracts the minimum element in the heap
+     heapify == does heapify at that node
+
+################################################################################
+
+QUESTION:5 ----KRUSKAL IMPLEMENTATION
+
+$ INPUT FORMAT:
+-->First line contains the single integer N(denoting number of vertices)(one new line character will be end of this input)
+-->Next lines consists of edges in the format E v1 v2 W [space separated][0<=v1,v2<N -->MUST BE FOLLOWED]('TWO NEW LINE characters will be end of this input)
+   (EACH EDGE SHOULD BE GIVEN IN A NEW LINE)
+$LIBRARIES USED:
+-->stringstream , getline
+
+$FUNCTIONS:
+-->edge_input == take edges INPUT
+-->print == prints the edges in the graph
+-->kruskal == implements KRUSKAL on the given graph
+-->sort == sorts the edges of graph by weight
+-->print_tree == prints the edges in spanning tree
+-->make_set == intialises parent,rank
+-->find_set == implemented with path compression
+-->union_set == implemented with rank heuristic
+-->check_tree == checks whether the tree we got is a spanning tree or not.
+
+#################################
